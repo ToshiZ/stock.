@@ -15,11 +15,11 @@ export const AppRoutes: Routes = [{
         loadChildren: './dashboard/dashboard.module#DashboardModule'
     }
         , {
-        path: 'apps',
-        loadChildren: './apps/apps.module#AppsModule'
+        path: 'add-task',
+        loadChildren: './stock/add-task/add-task.module#AddTaskModule'
     }, {
         path: 'widgets',
-        loadChildren: './widgets/widgets.module#WidgetsModule'
+        loadChildren: './home/home.module#HomeModule'
     }, {
         path: 'material',
         loadChildren: './material/material.module#MaterialComponentsModule'

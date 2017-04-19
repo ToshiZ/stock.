@@ -1,9 +1,9 @@
 {
-  "name": "primer-mean",
+  "name": "stock",
   "version": "0.0.1",
   "license": "MIT",
   "author": "nu_tooosh",
-  "description": "Angular Full Stack project built using Angular 4, Express, Mongoose and Node. With Primer UI Template.",
+  "description": "Project managment",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
@@ -11,6 +11,7 @@
     "start": "node dist/server/app.js",
     "predev": "tsc -p server",
     "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon\"",
+    "devv": "concurrently \"mongod\" \"tsc -w -p server\" \"nodemon\"",
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\"",
     "test": "ng test",
     "lint": "ng lint",

@@ -21,14 +21,14 @@ export class AdminLayoutComponent implements OnInit, OnDestroy {
   boxed: boolean;
   collapseSidebar: boolean;
   compactSidebar: boolean;
-  currentLang = 'en';
+  currentLang = 'ru';
   root = 'ltr';
 
   @ViewChild('sidemenu') sidemenu;
 
-  constructor(public menuItems: MenuItems, private router: Router, public translate: TranslateService ) {
+  constructor(public menuItems: MenuItems, private router: Router, public translate: TranslateService) {
     const browserLang: string = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    translate.use(browserLang.match(/en|ru/) ? browserLang : 'ru');
   }
 
   ngOnInit(): void {
@@ -102,8 +102,8 @@ export class AdminLayoutComponent implements OnInit, OnDestroy {
       type: 'sub',
       icon: 'trending_flat',
       children: [
-        {state: 'menu', name: 'MENU'},
-        {state: 'timelmenuine', name: 'MENU'}
+        { state: 'menu', name: 'MENU' },
+        { state: 'timelmenuine', name: 'MENU' }
       ]
     });
   }

@@ -1,4 +1,4 @@
-<div class="app" #root="$implicit" dir="ltr" [ngClass]="{'app-dark': dark, 'boxed': boxed, 'collapsed-sidebar': collapseSidebar, 'compact-sidebar': compactSidebar}">
+<div class="app" #root="$implicit" dir="ltr" [ngClass]="{'app-dark': !dark, 'boxed': boxed, 'collapsed-sidebar': collapseSidebar, 'compact-sidebar': compactSidebar}">
   <md-toolbar class="main-header" color="primary">
     <button (click)="sidemenu.toggle()" md-icon-button>
       <md-icon>menu</md-icon>
@@ -9,7 +9,7 @@
     <div class="search-bar" fxFlex>
       <form class="search-form" fxShow="false" fxShow.gt-xs>
         <md-icon>search</md-icon>
-        <input type="text" placeholder="Search" autofocus="true" />
+        <input type="text" placeholder="Поиск" autofocus="true" />
       </form>
     </div>
     <button appToggleFullscreen md-icon-button>
@@ -43,7 +43,8 @@
   </md-toolbar>
 
   <md-sidenav-container class="app-inner">
-    <md-sidenav #sidemenu class="sidebar-panel" id="sidebar-panel" [mode]="isOver() ? 'over' : 'side'" [opened]="!isOver()" (mouseover)="menuMouseOver()" (mouseout)="menuMouseOut()">
+    <md-sidenav #sidemenu class="sidebar-panel" id="sidebar-panel" [mode]="isOver() ? 'over' : 'side'" [opened]="!isOver()" (mouseover)="menuMouseOver()"
+      (mouseout)="menuMouseOut()">
       <md-nav-list appAccordion class="navigation">
         <md-list-item appAccordionLink *ngFor="let menuitem of menuItems.getAll()" group="{{menuitem.state}}">
           <a appAccordionToggle class="relative" md-ripple [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
@@ -78,12 +79,12 @@
           </md-nav-list>
         </md-list-item>
         <md-divider></md-divider>
-        <md-list-item>
+        <!--<md-list-item>
           <a (click)="addMenuItem()">
             <md-icon>add</md-icon>
             <span>Add</span>
           </a>
-        </md-list-item>
+        </md-list-item>-->
       </md-nav-list>
     </md-sidenav>
     <md-sidenav #end align="end" class="chat-panel" mode="over" opened="false">
@@ -103,32 +104,32 @@
               <md-divider></md-divider>
               <h3 md-subheader class="text-uppercase font-weight-bold">Stocks</h3>
               <md-list-item>
-                 <a md-line href="javascript:;">NASDAQ</a>
-                 <span class="mat-text-muted text-md mr-xs ml-xs">4,492.87</span>
-                 <span>-0.29%</span>
+                <a md-line href="javascript:;">NASDAQ</a>
+                <span class="mat-text-muted text-md mr-xs ml-xs">4,492.87</span>
+                <span>-0.29%</span>
               </md-list-item>
               <md-list-item>
-                 <a md-line href="javascript:;">NYSE</a>
-                 <span class="mat-text-muted text-md mr-xs ml-xs">10,692.07</span>
-                 <span>-0.53%</span>
+                <a md-line href="javascript:;">NYSE</a>
+                <span class="mat-text-muted text-md mr-xs ml-xs">10,692.07</span>
+                <span>-0.53%</span>
               </md-list-item>
               <md-list-item>
-                 <a md-line href=javascript:;>DOW J</a>
-                 <span class="mat-text-muted text-md mr-xs ml-xs">17,046.81</span>
-                 <span>-0.14%</span>
+                <a md-line href=javascript:;>DOW J</a>
+                <span class="mat-text-muted text-md mr-xs ml-xs">17,046.81</span>
+                <span>-0.14%</span>
               </md-list-item>
               <md-list-item>
-                 <a md-line href="javascript:;">APPL</a>
-                 <span class="mat-text-muted text-md mr-xs ml-xs">100,89</span>
-                 <span>+0.75%</span>
+                <a md-line href="javascript:;">APPL</a>
+                <span class="mat-text-muted text-md mr-xs ml-xs">100,89</span>
+                <span>+0.75%</span>
               </md-list-item>
               <md-divider></md-divider>
               <h3 md-subheader class="text-uppercase font-weight-bold">Weather</h3>
               <md-list-item>
-                 <a md-line href="javascript:;">{{ today | date:'shortTime' }}</a>
-                 <p md-line class="mat-text-muted">London</p>
-                 <span class="h4 pe-is-w-blizzard mr-1"></span>
-                 <span class="h4">26°</span>
+                <a md-line href="javascript:;">{{ today | date:'shortTime' }}</a>
+                <p md-line class="mat-text-muted">London</p>
+                <span class="h4 pe-is-w-blizzard mr-1"></span>
+                <span class="h4">26°</span>
               </md-list-item>
               <md-divider></md-divider>
               <h3 md-subheader class="text-uppercase font-weight-bold">Todo</h3>
@@ -137,26 +138,26 @@
                 <p md-line class="mat-text-muted text-md">2:45PM</p>
               </md-list-item>
               <md-list-item>
-                 <a md-line href="javascript:;">Learn Angular Material</a>
-                 <p md-line class="mat-text-muted text-md">3:20PM</p>
+                <a md-line href="javascript:;">Learn Angular Material</a>
+                <p md-line class="mat-text-muted text-md">3:20PM</p>
               </md-list-item>
               <md-list-item>
-                 <a md-line href="javascript:;">Write documentation</a>
-                 <p md-line class="mat-text-muted text-md">6:00PM</p>
+                <a md-line href="javascript:;">Write documentation</a>
+                <p md-line class="mat-text-muted text-md">6:00PM</p>
               </md-list-item>
               <md-divider class="mt-xs mb-xs"></md-divider>
               <h3 md-subheader class="text-uppercase font-weight-bold">Stats</h3>
               <md-list-item>
                 <p class="text-md" md-line>Local Storage (4023 / 10690)</p>
-                <md-progress-bar  md-line mode="determinate" color="warn" value="40"></md-progress-bar>
+                <md-progress-bar md-line mode="determinate" color="warn" value="40"></md-progress-bar>
               </md-list-item>
               <md-list-item>
                 <p class="text-md" md-line>Cloud Storage (700 / 1030)</p>
-                <md-progress-bar  md-line mode="determinate" color="accent" value="70"></md-progress-bar>
+                <md-progress-bar md-line mode="determinate" color="accent" value="70"></md-progress-bar>
               </md-list-item>
               <md-list-item>
                 <p class="text-md" md-line>Local Storage (20 / 100)</p>
-                <md-progress-bar  md-line mode="determinate" value="20"></md-progress-bar>
+                <md-progress-bar md-line mode="determinate" value="20"></md-progress-bar>
               </md-list-item>
             </md-nav-list>
           </div>
@@ -241,16 +242,16 @@
         <md-checkbox [(ngModel)]="boxed" [align]="end">Boxed Layout</md-checkbox>
       </div>
       <div class="pb-1">
-        <md-checkbox [(ngModel)]="dark" [align]="end">Dark Mode</md-checkbox>
+        <md-checkbox [(ngModel)]="dark" [align]="end">Светлый интерфейс</md-checkbox>
       </div>
       <div class="pb-1">
         <md-checkbox (change)="root.dir = (root.dir == 'rtl' ? 'ltr' : 'rtl')" [align]="end">RTL</md-checkbox>
       </div>
-      <div class="pb-0">
+      <!--<div class="pb-0">
         <md-select placeholder="Language" class="mt-1" [(ngModel)]="currentLang" #langSelect="ngModel" (ngModelChange)="translate.use(currentLang)">
           <md-option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</md-option>
         </md-select>
-     </div>
+      </div>-->
     </md-card-content>
   </md-card>
   <!-- /Demo Purposes Only -->

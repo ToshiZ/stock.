@@ -1,17 +1,3 @@
-# Angular4 Primer Node Mongo
-
-
-The front-end of this project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-
-This project uses the [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(software_bundle)):
-* [**M**ongoose.js](http://www.mongoosejs.com) ([MongoDB](https://www.mongodb.com)): database
-* [**E**xpress.js](http://expressjs.com): backend framework
-* [**A**ngular 4](https://angular.io): frontend framework
-* [**N**ode.js](https://nodejs.org): runtime environment
-* [Angular CLI](https://cli.angular.io): project scaffolding
-* [Bootstrap](http://www.getbootstrap.com): layout and styles
-* [Font Awesome](http://fontawesome.io): icons
-
 ## Prerequisites
 1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
 2. Install Angular CLI: `npm i -g @angular/cli`
@@ -45,13 +31,6 @@ A window will automatically open at [localhost:4200](http://localhost:4200). Ang
 16. `heroku open`
 17. A window will open with your app online
 
-## Please open an issue if
-* you have any suggestion to improve this project
-* you noticed any problem or error
-* you have a question
-
-## To do
-* More tests
 
 ## Running unit tests
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -63,7 +42,5 @@ Before running the tests make sure you are serving the app via `npm start`.
 ## Running TSLint
 Run `ng lint` to execute the linter via [TSLint](https://palantir.github.io/tslint/).
 
-## Further help
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 

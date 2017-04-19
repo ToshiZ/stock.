@@ -45,7 +45,7 @@ export function createTranslateLoader(http: Http) {
     FlexLayoutModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ ],
   entryComponents: [JazzDialogComponent, CalendarDialogComponent],
   bootstrap: [AppComponent]
 })

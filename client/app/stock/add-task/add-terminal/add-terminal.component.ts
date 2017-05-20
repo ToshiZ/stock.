@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'add-task',
-  templateUrl: './add-task.component.html',
-  styleUrls: ['./add-task.component.scss']
+  selector: 'add-terminal',
+  templateUrl: './add-terminal.component.html',
+  styleUrls: ['./add-terminal.component.scss']
 })
-export class AddTaskComponent {
+export class AddTerminalComponent {
 
   systems: Object[] = [{
     name: 'Lights',

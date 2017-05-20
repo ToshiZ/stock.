@@ -23,15 +23,23 @@ export interface Menu {
 const MENUITEMS = [
   {
     state: 'home',
-    name: 'HOME',
+    name: 'TR_HOME',
     type: 'link',
     icon: 'timeline'
   },
   {
     state: 'add-task',
-    name: 'ADD_TASK',
-    type: 'link',
-    icon: 'add_box'
+    name: 'TR_ADD_TASK',
+    type: 'sub',
+    icon: 'add_box',
+    children: [
+      {state: 'add-gradient', name: 'TR_GRADIENT'},
+      {state: 'add-kordon', name: 'TR_KORDON'},
+      {state: 'add-oks', name: 'TR_OKS'},
+      {state: 'add-oks2', name: 'TR_OKS_2'},
+      {state: 'add-roziskUkv', name: 'TR_ROZISK_UKV'},
+      {state: 'add-terminal', name: 'TR_TERMINAL'}
+    ]
   }
   // {
   //   state: 'add_file_task',

@@ -13,34 +13,9 @@ export const AppRoutes: Routes = [{
     children: [{
         path: 'home',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
-    }
-        , {
+    }, {
         path: 'add-task',
         loadChildren: './stock/add-task/add-task.module#AddTaskModule'
-    }, {
-        path: 'widgets',
-        loadChildren: './home/home.module#HomeModule'
-    }, {
-        path: 'material',
-        loadChildren: './material/material.module#MaterialComponentsModule'
-    }, {
-        path: 'forms',
-        loadChildren: './forms/forms.module#FormModule'
-    }, {
-        path: 'tables',
-        loadChildren: './tables/tables.module#TablesModule'
-    }, {
-        path: 'charts',
-        loadChildren: './chartlib/chartlib.module#ChartlibModule'
-    }, {
-        path: 'maps',
-        loadChildren: './maps/maps.module#MapModule'
-    }, {
-        path: 'dragndrop',
-        loadChildren: './dragndrop/dragndrop.module#DragndropModule'
-    }, {
-        path: 'pages',
-        loadChildren: './pages/pages.module#PagesModule'
     }]
 },
 {

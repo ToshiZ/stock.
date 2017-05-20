@@ -1,5 +1,13 @@
 {
-  "HOME": "Обзор",
+  "TR_HOME": "Обзор",
+  "TR_ADD_TASK": "Новое задание",
+  "TR_ADD_FILE_TASK": "Новый документ",
+  "TR_GRADIENT": "Градиент",
+  "TR_KORDON": "Кордон",
+  "TR_OKS": "ОКС",
+  "TR_OKS_2": "ОКС 2",
+  "TR_ROZISK_UKV": "Розыск УКВ",
+  "TR_TERMINAL": "Терминал",
 
   "APPS": "Apps",
   "CALENDAR": "Calendar",
@@ -67,8 +75,5 @@
   "LOCKSCREEN": "Lockscreen",
   "ERROR": "Error",
   
-  "DOCS": "Docs",
-
-  "ADD_TASK": "Новая задача",
-  "ADD_FILE_TASK": "Новый документ"
+  "DOCS": "Docs"
 }
